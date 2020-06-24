@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predicitng attrition rate </h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="growth_rate" placeholder="growth_rate" required="required" />
+        <input type="text" name="Age" placeholder="Age" required="required" />
+	<input type="text" name="Time_of_service" placeholder="Time_of_service" required="required" />
+        <input type="text" name="Education_Level_2" placeholder="Education_Level_2" required="required" />
+	<input type="text" name="Unit_Sales" placeholder="Unit_Sales" required="required" />
+	<input type="text" name="VAR2" placeholder="VAR2" required="required" />
+	<input type="text" name="Compensation_and_Benefits_type4" placeholder="Compensation_and_Benefits_type4" required="required" />	
+	<input type="text" name="VAR7_2" placeholder="VAR7_2" required="required" />
+	<input type="text" name="Pay_Scale_4.0" placeholder="Pay_Scale_4.0" required="required" />
+	<input type="text" name="Unit_Security" placeholder="Unit_Security" required="required" />
+	<input type="text" name="Unit_Human Resource Management" placeholder="Unit_Human Resource Management" required="required" />
+	<input type="text" name="VAR6_6" placeholder="VAR6_6" required="required" />
+	<input type="text" name="VAR1_5" placeholder="VAR1_5" required="required" />
+	<input type="text" name="Pay_Scale_9.0" placeholder="Pay_Scale_9.0" required="required" />
+	<input type="text" name="Unit_R&D" placeholder="Unit_R&D" required="required" />
+	<input type="text" name="Post_Level_2" placeholder="Post_Level_2" required="required" />
+	<input type="text" name="Unit_Purchasing" placeholder="Unit_Purchasing" required="required" />
+	<input type="text" name="Work_Life_balance_2.0" placeholder="Work_Life_balance_2.0" required="required" />
+	<input type="text" name="VAR3_0.7075" placeholder="VAR3_0.7075" required="required" />
+	<input type="text" name="Time_since_promotion_1" placeholder="Time_since_promotion_1" required="required" />
+	<input type="text" name="Gender_M" placeholder="Gender_M" required="required" />
+	<input type="text" name="Compensation_and_Benefits_type1" placeholder="Compensation_and_Benefits_type1" required="required" />
+	<input type="text" name="Pay_Scale_2.0"  placeholder="Pay_Scale_2.0"  required="required" />
+
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
